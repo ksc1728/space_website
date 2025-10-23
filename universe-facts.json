@@ -1,0 +1,129 @@
+{
+  "universeFacts": [
+    {
+      "id": 1,
+      "fact": "The observable universe is estimated to be 93 billion light-years in diameter, even though it's only 13.8 billion years old.",
+      "category": "Size & Scale"
+    },
+    {
+      "id": 2,
+      "fact": "There are more stars in the universe than grains of sand on all the beaches on Earth - estimated at 10^24 stars.",
+      "category": "Stars"
+    },
+    {
+      "id": 3,
+      "fact": "A teaspoon of neutron star material would weigh about 6 billion tons on Earth.",
+      "category": "Extreme Objects"
+    },
+    {
+      "id": 4,
+      "fact": "Dark matter makes up about 27% of the universe, while ordinary matter only accounts for 5%.",
+      "category": "Dark Matter"
+    },
+    {
+      "id": 5,
+      "fact": "The largest known structure in the universe is the Hercules-Corona Borealis Great Wall, spanning 10 billion light-years.",
+      "category": "Large Structures"
+    },
+    {
+      "id": 6,
+      "fact": "One day on Venus is longer than one year on Venus - it takes 243 Earth days to rotate once but only 225 Earth days to orbit the Sun.",
+      "category": "Planets"
+    },
+    {
+      "id": 7,
+      "fact": "Black holes can have temperatures, and the larger they are, the colder they get due to Hawking radiation.",
+      "category": "Black Holes"
+    },
+    {
+      "id": 8,
+      "fact": "The coldest place in the universe is the Boomerang Nebula at -458°F (-272°C), just 1 degree above absolute zero.",
+      "category": "Temperature"
+    },
+    {
+      "id": 9,
+      "fact": "Jupiter's moon Europa has twice as much water as all of Earth's oceans combined, hidden beneath its icy surface.",
+      "category": "Moons"
+    },
+    {
+      "id": 10,
+      "fact": "The Sun converts 4 million tons of matter into energy every second through nuclear fusion.",
+      "category": "Sun"
+    },
+    {
+      "id": 11,
+      "fact": "Space is completely silent because sound waves need a medium to travel through, and space is a vacuum.",
+      "category": "Space Environment"
+    },
+    {
+      "id": 12,
+      "fact": "The Milky Way galaxy is on a collision course with the Andromeda galaxy, expected to merge in about 4.5 billion years.",
+      "category": "Galaxies"
+    },
+    {
+      "id": 13,
+      "fact": "A single solar flare can release the energy equivalent to billions of hydrogen bombs.",
+      "category": "Solar Activity"
+    },
+    {
+      "id": 14,
+      "fact": "The universe is expanding at an accelerating rate, driven by mysterious dark energy.",
+      "category": "Cosmic Expansion"
+    },
+    {
+      "id": 15,
+      "fact": "Saturn's moon Titan has lakes and rivers of liquid methane and ethane instead of water.",
+      "category": "Moons"
+    },
+    {
+      "id": 16,
+      "fact": "The Great Red Spot on Jupiter is a storm that has been raging for at least 400 years and is larger than Earth.",
+      "category": "Planets"
+    },
+    {
+      "id": 17,
+      "fact": "Gamma-ray bursts are the most energetic explosions in the universe, releasing more energy in seconds than our Sun will in its entire lifetime.",
+      "category": "Extreme Events"
+    },
+    {
+      "id": 18,
+      "fact": "The cosmic microwave background radiation is the afterglow of the Big Bang, still detectable today as a faint signal throughout space.",
+      "category": "Big Bang"
+    },
+    {
+      "id": 19,
+      "fact": "Magnetars are neutron stars with magnetic fields trillions of times stronger than Earth's, capable of warping the very atoms around them.",
+      "category": "Extreme Objects"
+    },
+    {
+      "id": 20,
+      "fact": "The farthest galaxy ever observed, GN-z11, appears as it was just 400 million years after the Big Bang.",
+      "category": "Distant Objects"
+    },
+    {
+      "id": 21,
+      "fact": "If you could fold a piece of paper 42 times, it would reach the Moon. If you folded it 103 times, it would be thicker than the observable universe.",
+      "category": "Scale Comparison"
+    },
+    {
+      "id": 22,
+      "fact": "Proxima Centauri, our nearest star neighbor, would take over 70,000 years to reach with current technology.",
+      "category": "Interstellar Distance"
+    },
+    {
+      "id": 23,
+      "fact": "The asteroid belt between Mars and Jupiter contains less mass than Earth's Moon despite having millions of asteroids.",
+      "category": "Solar System"
+    },
+    {
+      "id": 24,
+      "fact": "Quasars are so bright they can outshine entire galaxies while being powered by supermassive black holes.",
+      "category": "Quasars"
+    },
+    {
+      "id": 25,
+      "fact": "The temperature at the core of the Sun is about 27 million degrees Fahrenheit (15 million Celsius) - 6 times hotter than the surface.",
+      "category": "Sun"
+    }
+  ]
+}

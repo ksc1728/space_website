@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UniVerses</title>
+  <link rel="stylesheet" href="weightChecking.css">
+</head>
+<body>
+  <div class="heading">
+    <h2>Weight check in space</h2>
+  </div>
+  <div class="weight-section">
+    <form>
+      <label for="weight">Weight (in kgs)</label>
+      <input type="text" id="weight" name="weight" placeholder="Enter your weight">
+      
+      <label for="height">Height (in cms)</label>
+      <input type="text" id="height" name="height" placeholder="Enter your height">
+
+      <button type="submit" class="submit">Calculate</button>
+    </form>
+  </div>
+  <div class="planet-block">
+    <div class="planet">
+      <img alt="" src="https://t2.gstatic.com/licensed-image?q=tbn:ANd9GcSC-tzajqpca4dchoeTCp8ChzFqdXnSnKtpkbx_5arltgIZQDdV4ALDa2ojaIHmI0GE" height="150px" width="150px">
+      <div class="planet-wt" ><p></p><div class="tooltip"></div></div>
+    </div>
+    <div class="planet">
+      <img alt="" src="https://scx2.b-cdn.net/gfx/news/hires/2015/whatsimporta.jpg" height="150px" width="150px">
+      <div class="planet-wt" ><p></p><div class="tooltip"></div></div>
+    </div>
+    <div class="planet">
+      <img alt="" src="https://dq0hsqwjhea1.cloudfront.net/Venus_UV_Credit_PLANET-C-Project_Team_600px.jpg" height="150px" width="150px">
+      <div class="planet-wt" ><p></p><div class="tooltip"></div></div>
+    </div>
+    <div class="planet">
+      <img alt="" src="https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2023/04/earth_30_year_comparison/24832556-1-eng-GB/Earth_30_year_comparison_pillars.jpg" height="150px" width="150px">
+      <div class="planet-wt" ><p></p><div class="tooltip"></div></div>
+    </div>
+    <div class="planet">
+      <img alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcResKgG9-bL7nsjXmk20wVECUqg6h-0qcZgtA&s" height="150px" width="150px">
+      <div class="planet-wt" ><p></p><div class="tooltip"></div></div>
+    </div>
+    <div class="planet">
+      <img alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt6wijSNVQWTA98qj3p9mCAsbnz_AeIW2esg&s" height="150px" width="150px">
+      <div class="planet-wt" ><p></p><div class="tooltip"></div></div>
+    </div>
+    <div class="planet">
+      <img alt="" src="https://stsci-opo.org/STScI-01H41MMZBTKN3M1SGS2N9TKZ7S.jpg" height="150px" width="150px">
+      <div class="planet-wt" ><p></p><div class="tooltip"></div></div>
+    </div>
+    <div class="planet">
+      <img alt="" src="https://www.cnet.com/a/img/resize/9e6a1b6823e3cd7e977c92ca3699c8037d82fa17/hub/2024/11/08/85f11af6-ee4c-4c1f-afdc-336f53ab119f/uranus-gettyimages-1498385769.jpg?auto=webp&fit=crop&height=1200&width=1200" height="150px" width="150px">
+      <div class="planet-wt" ><p></p><div class="tooltip"></div></div>
+    </div>
+    <div class="planet">
+      <img alt="" src="https://assets.science.nasa.gov/dynamicimage/assets/science/psd/solar/2023/09/p/i/a/0/PIA01492-1.jpg?w=2188&h=2185&fit=clip&crop=faces%2Cfocalpoint" height="150px" width="150px">
+      <div class="planet-wt" ><p></p><div class="tooltip"></div></div>
+    </div>
+    <div class="planet">
+      <img alt="" src="https://images.newscientist.com/wp-content/uploads/2016/03/p_color2_enhanced_release_black_smaller.jpg?crop=1:1,smart&width=1200&height=1200&upscale=true" height="150px" width="150px">
+      <div class="planet-wt" ><p></p><div class="tooltip"></div></div>
+    </div>
+    <div class="planet">
+      <img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/FullMoon2010.jpg/960px-FullMoon2010.jpg" height="150px" width="150px">
+      <div class="planet-wt" ><p></p><div class="tooltip"></div></div>
+    </div>
+    <div id="fact-display">
+
+    </div>
+  </div>
+  <script>
+  const universeFacts = [
+      { fact: "The Sun accounts for 99.86% of the mass in our solar system.", category: "Solar System" },
+      { fact: "A day on Venus is longer than its year.", category: "Planets" },
+      { fact: "Jupiter has the shortest day of all the planets (it turns on its axis once every 9 hours and 55 minutes).", category: "Planets" },
+      { fact: "The Milky Way galaxy is estimated to contain 100 to 400 billion stars.", category: "Galaxies" },
+      { fact: "If you could fold a piece of paper 42 times, it would reach the Moon.", category: "General Space"},
+      { fact: "Neutron stars are so dense that a teaspoonful would weigh about 6 billion tons.", category: "Stars"}
+    ];
+
+    const gravityMap = {
+      Sun: [27.9, 0],
+      Mercury: [0.38, 1],
+      Venus: [0.91, 2],
+      Earth: [1.00, 3],
+      Mars: [0.38, 4],
+      Jupiter: [2.34, 5],
+      Saturn: [1.06, 6],
+      Uranus: [0.92, 7],
+      Neptune: [1.19, 8],
+      Pluto: [0.06, 9],
+      Moon: [0.165, 10]
+    };
+
+    function getRandomFact() {
+      const randomIndex = Math.floor(Math.random() * universeFacts.length);
+      return universeFacts[randomIndex];
+    }
+
+    function displayRandomFact() {
+      const randomFact = getRandomFact();
+      document.getElementById('fact-display').innerHTML = `
+      <div class="fact-block">
+          <div class="fact-header">
+          <h3 class="fact-title">🌌 Universe Facts</h3>
+          <button class="new-fact-btn" onclick="displayRandomFact()">New Fact</button>
+          </div>
+          <p>${randomFact.fact}</p>
+          <small>Category: ${randomFact.category}</small>
+      </div>
+      `;
+    }
+
+    document.querySelector("form").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const weightInput = document.getElementById("weight");
+      const heightInput = document.getElementById("height");
+
+      clearError(weightInput);
+      clearError(heightInput);
+
+      const weight = parseFloat(weightInput.value);
+      const heightCm = parseFloat(heightInput.value);
+      
+
+      let isValid = true;
+      if (isNaN(weight) || weight <= 0) {
+        setError(weightInput, "Positive number required");
+        isValid = false;
+      }
+      if (isNaN(heightCm) || heightCm <= 0) {
+        setError(heightInput, "Positive number required");
+        isValid = false;
+      }
+      
+      if (!isValid) {
+        const resultEls = document.querySelectorAll(".planet-wt");
+         resultEls.forEach(el => {
+            el.querySelector("p").textContent = "";
+            el.querySelector(".tooltip").textContent = "";
+        });
+        return;
+      }
+      
+      const heightM = heightCm / 100;
+      const resultEls = document.querySelectorAll(".planet-wt");
+
+      Object.entries(gravityMap).forEach(([planet, [ratio, index]]) => {
+        const planetWeight = (weight * ratio);
+        const bmi = (planetWeight / (heightM * heightM));
+
+        const planetEl = resultEls[index];
+        // Display weight with 2 decimal places if it's not a whole number, else display as whole number
+        planetEl.querySelector("p").textContent = `${planet}: ${parseFloat(planetWeight.toFixed(2))} kg`;
+
+        const tooltipEl = planetEl.querySelector(".tooltip");
+        tooltipEl.textContent = `Gravity: ${ratio} × Earth\nBMI: ${bmi.toFixed(2)}`;
+      });
+    });
+    
+    function setError(inputElement, message) {
+        const formControl = inputElement.parentElement; // Assuming input is directly in form or a div
+        let errorDisplay = formControl.querySelector(".error-message");
+        if (!errorDisplay) {
+            errorDisplay = document.createElement("small");
+            errorDisplay.classList.add("error-message");
+            // Insert after the input field
+            inputElement.parentNode.insertBefore(errorDisplay, inputElement.nextSibling);
+
+        }
+        errorDisplay.textContent = message;
+        inputElement.classList.add("input-error"); // Optional: for styling the input field
+    }
+
+    function clearError(inputElement) {
+        const formControl = inputElement.parentElement;
+        const errorDisplay = formControl.querySelector(".error-message");
+        if (errorDisplay) {
+            errorDisplay.textContent = ""; 
+        }
+        inputElement.classList.remove("input-error"); // Optional
+    }
+
+
+    // Display initial random fact
+    if (universeFacts && universeFacts.length > 0) {
+        displayRandomFact();
+    } else {
+        document.getElementById('fact-display').innerHTML = `<p>No facts available at the moment.</p>`;
+    }
+</script>
+
+</body>
+</html>

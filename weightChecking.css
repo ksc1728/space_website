@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wdth,wght@0,87.5,100..900;1,87.5,100..900&display=swap');
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:"Saira", sans-serif;
+  background:url("https://t4.ftcdn.net/jpg/01/28/98/53/360_F_128985367_mNdX0b56w6OcgiyUDnZwukpK1bkpfWwI.jpg");
+  min-height: 100vh;
+}
+
+.heading{
+  padding:2rem 2rem;
+  background:url("https://t4.ftcdn.net/jpg/01/28/98/53/360_F_128985367_mNdX0b56w6OcgiyUDnZwukpK1bkpfWwI.jpg");
+  overflow:hidden;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.heading h2{
+  font-family:"Saira", sans-serif;
+  color:#c0c0c0;
+  font-size:2rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.weight-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #c0c0c0;
+  color: black;
+  padding: 3rem;
+  border: 2px solid black;
+  margin: 0 auto;
+  width: 80vw;
+  min-height: 300px; 
+  max-width: 900px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  padding: 0.8rem;
+  border: 1px solid #666;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+
+.weight-section .submit{
+  padding:0.5rem;
+  background:black;
+  color:#c0c0c0;
+  border:2px solid black;
+  font-size:1rem;
+  font-family:"Saira", sans-serif;
+}
+
+.weight-section .submit:hover{
+  box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  
+}
+
+.planet-block {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  padding: 2rem;
+  gap: 2rem 1rem;
+  
+}
+
+.planet {
+  background-color: black;
+  border: 2px solid black;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 15px;
+  text-align: center;
+  
+}
+
+.planet:hover {
+    transform: translateY(-5px);
+}
+
+.planet img {
+  width: 100%;
+  height: auto;
+  padding: 0.8rem;
+  border-radius: 4px;
+}
+
+.planet-wt {
+  position: relative; 
+}
+
+
+.planet-wt p {
+  margin: 0.1rem 0 0 0;
+  font-weight: bold;
+  color:#c0c0c0;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 100%; 
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #222;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 5px;
+  white-space: pre-line;
+  font-size: 12px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.planet-wt:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.fact-block {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle at top left, #4e54c8, #8f94fb);
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(142, 150, 255, 0.6);
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.fact-block:hover {
+  transform: scale(1);
+  box-shadow: 0 0 30px rgba(142, 150, 255, 0.9);
+}
+
+.fact-header {
+  margin-bottom: 10px;
+}
+
+.fact-title {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.new-fact-btn {
+  margin-top: 5px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #ffffff20;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background-color 0.3s;
+}
+
+.new-fact-btn:hover {
+  background-color: #ffffff40;
+}
+
+.fact-block p {
+  font-size: 0.85rem;
+  margin: 10px 0 5px;
+}
+
+.fact-block small {
+  font-size: 0.75rem;
+  color: #ddd;
+}
