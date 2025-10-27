@@ -3,9 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <title>UniVerses</title>
-  <link rel="stylesheet" href="contact.css">
-  <link rel="stylesheet" href="style.css">
   
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.0/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
+        
+        body {
+            font-family: 'Oxanium', sans-serif;
+            background-image: url('./adobestock_139734558-scaled.webp');
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100vh;
+        }
+    </style>
 </head>
 <body>
   <nav class="navbar">
@@ -19,48 +33,58 @@
     </ul>
   </nav>
 
-    <div class="image">
-        <h1 id="heading">Contact Us</h1>
-        <div class="matter"><p>
-            ViewSpace is dedicated to serving professionals in the informal science education community, 
-            such as museum exhibit developers and planetarium directors. 
-            If you are a professional in this community and have a comment, question, or request, 
-            then please let us know how we can help.
-        </p>
+    <div class="p-8 text-center text-black mt-8">
+        <h1 id="heading" class="text-5xl font-bold">Contact Us</h1>
+        <div class="mt-4">
+            <p class="text-xl">
+                ViewSpace is dedicated to serving professionals in the informal science education community, 
+                such as museum exhibit developers and planetarium directors. 
+                If you are a professional in this community and have a comment, question, or request, 
+                then please let us know how we can help.
+            </p>
         </div>
     </div>
 
-    <div class="message-block">
-        <div class="contact-form">
-            <h4>Get in touch</h4>
-            <p>Please fill in your details and lets be in touch</p>
-            <form>
-                <label>Email Address</label>
-                <input type="email">
-                <label>Name</label>
-                <input type="text">
-                <label>Mobile Number</label>
-                <input type="text">
-                <label>Organization</label>
-                <input type="text">
-                <label>Message</label>
-                <textarea></textarea>
-                <button type="submit">submit</button>
+    <div class="flex justify-center items-start gap-12 flex-wrap p-12 text-white">
+        <div class="bg-black bg-opacity-75 p-8 rounded-3xl border-2 border-white max-w-md flex-1">
+            <h4 class="text-3xl mb-2">Get in touch</h4>
+            <p class="text-lg mb-4">Please fill in your details and lets be in touch</p>
+            <form class="flex flex-col gap-4">
+                <label class="font-bold">Email Address</label>
+                <input type="email" class="p-3 text-base border border-gray-400 rounded-md w-full text-black">
+                
+                <label class="font-bold">Name</label>
+                <input type="text" class="p-3 text-base border border-gray-400 rounded-md w-full text-black">
+                
+                <label class="font-bold">Mobile Number</label>
+                <input type="text" class="p-3 text-base border border-gray-400 rounded-md w-full text-black">
+                
+                <label class="font-bold">Organization</label>
+                <input type="text" class="p-3 text-base border border-gray-400 rounded-md w-full text-black">
+                
+                <label class="font-bold">Message</label>
+                <textarea class="p-3 text-base border border-gray-400 rounded-md w-full text-black min-h-32"></textarea>
+                
+                <button type="submit" class="p-4 text-lg text-white bg-black border-2 border-white cursor-pointer transition-all duration-300 ease-in-out hover:bg-white hover:text-black">
+                    submit
+                </button>
             </form>
         </div>
-        <div class="contact-info">
-            <div class="customer-support">
-                <h4>customer support</h4>
-                <p>please contact support@Universe</p>
+        
+        <div class="flex flex-col gap-8 flex-1 max-w-md">
+            <div class="bg-black bg-opacity-80 p-8 rounded-3xl border-2 border-white">
+                <h4 class="text-2xl mb-2">customer support</h4>
+                <p class="text-lg">please contact support@Universe</p>
             </div>
-            <div class="add">
-                <h4>Address</h4>
-                <p>visakhapatnam</p>
-                <p>531173</p>
+            
+            <div class="bg-black bg-opacity-80 p-8 rounded-3xl border-2 border-white">
+                <h4 class="text-2xl mb-2">Address</h4>
+                <p class="text-lg mt-2">visakhapatnam</p>
+                <p class="text-lg mt-2">531173</p>
             </div>
         </div>
-        
     </div>
+  
 
   <section class="footer">
     <div class="top">
@@ -103,3 +127,4 @@
 </body>
 <script src="index.js"></script>
 </html>
+
